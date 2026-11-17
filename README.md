@@ -28,3 +28,13 @@ git push -u origin main
 
 ## Design and technical notes
 Products ek JS collection (CMS-style) se dynamically render hote hain. Payment Razorpay Checkout se hota hai, aur order details Google Apps Script webhook ke through Google Sheet mein save hoti hain. Layout CSS Grid/Flexbox se responsive hai. Challenge: browser se Sheets webhook ke liye `no-cors` mode use karna pada.
+
+## Live Demo 
+<img width="1366" height="768" alt="Screenshot (520)" src="https://github.com/user-attachments/assets/33299fbd-81f2-4856-9478-88efc53d252b" />
+
+<img width="1366" height="768" alt="Screenshot (521)" src="https://github.com/user-attachments/assets/9f146d47-1cc0-40f3-a3ed-9b69d6a5ae64" />
+
+<img width="1366" height="768" alt="Screenshot (522)" src="https://github.com/user-attachments/assets/4d0a4872-2022-416d-a395-f7066dce3c73" />
+
+
+
