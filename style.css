@@ -1,0 +1,37 @@
+:root{--bg:#f6f4fb;--ink:#1d1b3a;--mut:#5d5a7a;--card:#fff;--line:#e2dff0;--a:#b5246b;--b:#f2a33a;--c:#2b6cb0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15132b;--ink:#f1eefb;--mut:#aaa6c8;--card:#201e3d;--line:#34315a}}
+*{box-sizing:border-box}html{scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 'DM Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.1;margin:0 0 .5em}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:800}h2{font-size:1.3rem}
+a{color:inherit}button{font:inherit;cursor:pointer}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:16px;padding:12px 5vw;flex-wrap:wrap}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.3rem;text-decoration:none;margin-right:auto}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{text-decoration:none;font-weight:500;color:var(--mut)}nav a.on,nav a:hover{color:var(--a)}
+.btn{background:var(--a);color:#fff;border:0;border-radius:10px;padding:11px 20px;font-weight:700;text-decoration:none;display:inline-block}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink)}.btn:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--b);outline-offset:2px}
+section{padding:56px 5vw;max-width:1180px;margin:0 auto}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero p{color:var(--mut);max-width:48ch;font-size:1.1rem}
+.puz{aspect-ratio:1;border-radius:50%;position:relative;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.puz::after{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(from 0deg,transparent 0 14deg,rgba(255,255,255,.28) 14deg 15deg),repeating-radial-gradient(circle,transparent 0 22px,rgba(255,255,255,.22) 22px 23px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.card .puz{width:78%;margin:6px auto 10px}.card h3{font-size:1.1rem;margin:0}.card p{margin:0;color:var(--mut);font-size:.92rem}
+.price{font-weight:800;font-size:1.15rem}.tag{font-size:.8rem;color:var(--mut)}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+input,select{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);min-width:0}
+.tools{margin-bottom:22px}.tools input{flex:1 1 220px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.stages{display:flex;gap:6px;flex-wrap:wrap}.stages span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;font-size:.85rem}
+table{width:100%;border-collapse:collapse}td,th{padding:10px 6px;border-bottom:1px solid var(--line);text-align:left}
+.wrap{overflow-x:auto}
+.qty button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.fab{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:var(--b);color:#1d1b3a;border-radius:999px;padding:14px 20px;font-weight:800;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+form{display:grid;gap:12px;max-width:460px}label{display:grid;gap:4px;font-weight:500}
+.fees label{display:flex;gap:10px;align-items:center}.fees input{min-width:auto}
+.msg{padding:12px 16px;border-radius:10px;background:var(--card);border:1px solid var(--line);margin-top:14px}
+footer{border-top:1px solid var(--line);padding:30px 5vw;color:var(--mut);text-align:center}
+.page{display:none}.page.on{display:block}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero .puz{max-width:300px;margin:auto;order:-1}section{padding:36px 5vw}}
+@media(prefers-reduced-motion:no-preference){.puz{transition:transform .6s}.puz:hover{transform:rotate(12deg)}}
